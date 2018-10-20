@@ -15,6 +15,7 @@
 		14EDE1CE217B559F0056EFF4 /* RocketScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1CD217B559F0056EFF4 /* RocketScheduleTests.swift */; };
 		14EDE1D9217B559F0056EFF4 /* RocketScheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1D8217B559F0056EFF4 /* RocketScheduleUITests.swift */; };
 		664C898260670B758240EA8D /* Pods_RocketScheduleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E119CE4795E921F8160808FF /* Pods_RocketScheduleUITests.framework */; };
+		89FE78B7217B641B00C04B3F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE78B6217B641B00C04B3F /* Network.swift */; };
 		980FDBB9AE7CD5B353E7CE46 /* Pods_RocketSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A3D8845BA1885324BAD84 /* Pods_RocketSchedule.framework */; };
 		FF8CDC104C32D56FFDA5CB70 /* Pods_RocketScheduleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEECE8753B00F2D80FDDAC3 /* Pods_RocketScheduleTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		4EEECE8753B00F2D80FDDAC3 /* Pods_RocketScheduleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketScheduleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B68A4BBD6952C3243B79FC7 /* Pods-RocketScheduleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketScheduleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketScheduleTests/Pods-RocketScheduleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		637A3D8845BA1885324BAD84 /* Pods_RocketSchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketSchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89FE78B6217B641B00C04B3F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B19D561665CB5B912AAFF56E /* Pods-RocketScheduleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketScheduleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketScheduleUITests/Pods-RocketScheduleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E119CE4795E921F8160808FF /* Pods_RocketScheduleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketScheduleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF5CA550C50BB1215B1A609 /* Pods-RocketScheduleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketScheduleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocketScheduleTests/Pods-RocketScheduleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				14EDE1BF217B559F0056EFF4 /* Assets.xcassets */,
 				14EDE1C1217B559F0056EFF4 /* LaunchScreen.storyboard */,
 				14EDE1C4217B559F0056EFF4 /* Info.plist */,
+				89FE78B6217B641B00C04B3F /* Network.swift */,
 			);
 			path = RocketSchedule;
 			sourceTree = "<group>";
@@ -306,12 +309,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RocketSchedule/Pods-RocketSchedule-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -393,6 +398,7 @@
 			files = (
 				14EDE1BB217B559E0056EFF4 /* ViewController.swift in Sources */,
 				14EDE1B9217B559E0056EFF4 /* AppDelegate.swift in Sources */,
+				89FE78B7217B641B00C04B3F /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

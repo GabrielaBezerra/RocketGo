@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Network
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        getInfos() { (info) in
+            print(info)
+        }
     }
 
 
