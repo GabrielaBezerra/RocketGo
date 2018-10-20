@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14EDE1B9217B559E0056EFF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1B8217B559E0056EFF4 /* AppDelegate.swift */; };
+		14EDE1BB217B559E0056EFF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1BA217B559E0056EFF4 /* ViewController.swift */; };
+		14EDE1BE217B559E0056EFF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE1BC217B559E0056EFF4 /* Main.storyboard */; };
+		14EDE1C0217B559F0056EFF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE1BF217B559F0056EFF4 /* Assets.xcassets */; };
+		14EDE1C3217B559F0056EFF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE1C1217B559F0056EFF4 /* LaunchScreen.storyboard */; };
+		14EDE1CE217B559F0056EFF4 /* RocketScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1CD217B559F0056EFF4 /* RocketScheduleTests.swift */; };
+		14EDE1D9217B559F0056EFF4 /* RocketScheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1D8217B559F0056EFF4 /* RocketScheduleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14EDE1CA217B559F0056EFF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14EDE1AD217B559E0056EFF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14EDE1B4217B559E0056EFF4;
+			remoteInfo = RocketSchedule;
+		};
+		14EDE1D5217B559F0056EFF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14EDE1AD217B559E0056EFF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14EDE1B4217B559E0056EFF4;
+			remoteInfo = RocketSchedule;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14EDE1B5217B559E0056EFF4 /* RocketSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EDE1B8217B559E0056EFF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14EDE1BA217B559E0056EFF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14EDE1BD217B559E0056EFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14EDE1BF217B559F0056EFF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14EDE1C2217B559F0056EFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14EDE1C4217B559F0056EFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14EDE1C9217B559F0056EFF4 /* RocketScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocketScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EDE1CD217B559F0056EFF4 /* RocketScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketScheduleTests.swift; sourceTree = "<group>"; };
+		14EDE1CF217B559F0056EFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14EDE1D4217B559F0056EFF4 /* RocketScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocketScheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EDE1D8217B559F0056EFF4 /* RocketScheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketScheduleUITests.swift; sourceTree = "<group>"; };
+		14EDE1DA217B559F0056EFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14EDE1B2217B559E0056EFF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EDE1C6217B559F0056EFF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EDE1D1217B559F0056EFF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14EDE1AC217B559E0056EFF4 = {
+			isa = PBXGroup;
+			children = (
+				14EDE1B7217B559E0056EFF4 /* RocketSchedule */,
+				14EDE1CC217B559F0056EFF4 /* RocketScheduleTests */,
+				14EDE1D7217B559F0056EFF4 /* RocketScheduleUITests */,
+				14EDE1B6217B559E0056EFF4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14EDE1B6217B559E0056EFF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14EDE1B5217B559E0056EFF4 /* RocketSchedule.app */,
+				14EDE1C9217B559F0056EFF4 /* RocketScheduleTests.xctest */,
+				14EDE1D4217B559F0056EFF4 /* RocketScheduleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14EDE1B7217B559E0056EFF4 /* RocketSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				14EDE1B8217B559E0056EFF4 /* AppDelegate.swift */,
+				14EDE1BA217B559E0056EFF4 /* ViewController.swift */,
+				14EDE1BC217B559E0056EFF4 /* Main.storyboard */,
+				14EDE1BF217B559F0056EFF4 /* Assets.xcassets */,
+				14EDE1C1217B559F0056EFF4 /* LaunchScreen.storyboard */,
+				14EDE1C4217B559F0056EFF4 /* Info.plist */,
+			);
+			path = RocketSchedule;
+			sourceTree = "<group>";
+		};
+		14EDE1CC217B559F0056EFF4 /* RocketScheduleTests */ = {
+			isa = PBXGroup;
+			children = (
+				14EDE1CD217B559F0056EFF4 /* RocketScheduleTests.swift */,
+				14EDE1CF217B559F0056EFF4 /* Info.plist */,
+			);
+			path = RocketScheduleTests;
+			sourceTree = "<group>";
+		};
+		14EDE1D7217B559F0056EFF4 /* RocketScheduleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14EDE1D8217B559F0056EFF4 /* RocketScheduleUITests.swift */,
+				14EDE1DA217B559F0056EFF4 /* Info.plist */,
+			);
+			path = RocketScheduleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14EDE1B4217B559E0056EFF4 /* RocketSchedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14EDE1DD217B559F0056EFF4 /* Build configuration list for PBXNativeTarget "RocketSchedule" */;
+			buildPhases = (
+				14EDE1B1217B559E0056EFF4 /* Sources */,
+				14EDE1B2217B559E0056EFF4 /* Frameworks */,
+				14EDE1B3217B559E0056EFF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RocketSchedule;
+			productName = RocketSchedule;
+			productReference = 14EDE1B5217B559E0056EFF4 /* RocketSchedule.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14EDE1C8217B559F0056EFF4 /* RocketScheduleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14EDE1E0217B559F0056EFF4 /* Build configuration list for PBXNativeTarget "RocketScheduleTests" */;
+			buildPhases = (
+				14EDE1C5217B559F0056EFF4 /* Sources */,
+				14EDE1C6217B559F0056EFF4 /* Frameworks */,
+				14EDE1C7217B559F0056EFF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14EDE1CB217B559F0056EFF4 /* PBXTargetDependency */,
+			);
+			name = RocketScheduleTests;
+			productName = RocketScheduleTests;
+			productReference = 14EDE1C9217B559F0056EFF4 /* RocketScheduleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14EDE1D3217B559F0056EFF4 /* RocketScheduleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14EDE1E3217B559F0056EFF4 /* Build configuration list for PBXNativeTarget "RocketScheduleUITests" */;
+			buildPhases = (
+				14EDE1D0217B559F0056EFF4 /* Sources */,
+				14EDE1D1217B559F0056EFF4 /* Frameworks */,
+				14EDE1D2217B559F0056EFF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14EDE1D6217B559F0056EFF4 /* PBXTargetDependency */,
+			);
+			name = RocketScheduleUITests;
+			productName = RocketScheduleUITests;
+			productReference = 14EDE1D4217B559F0056EFF4 /* RocketScheduleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14EDE1AD217B559E0056EFF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Peteleco;
+				TargetAttributes = {
+					14EDE1B4217B559E0056EFF4 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					14EDE1C8217B559F0056EFF4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 14EDE1B4217B559E0056EFF4;
+					};
+					14EDE1D3217B559F0056EFF4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 14EDE1B4217B559E0056EFF4;
+					};
+				};
+			};
+			buildConfigurationList = 14EDE1B0217B559E0056EFF4 /* Build configuration list for PBXProject "RocketSchedule" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14EDE1AC217B559E0056EFF4;
+			productRefGroup = 14EDE1B6217B559E0056EFF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14EDE1B4217B559E0056EFF4 /* RocketSchedule */,
+				14EDE1C8217B559F0056EFF4 /* RocketScheduleTests */,
+				14EDE1D3217B559F0056EFF4 /* RocketScheduleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14EDE1B3217B559E0056EFF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EDE1C3217B559F0056EFF4 /* LaunchScreen.storyboard in Resources */,
+				14EDE1C0217B559F0056EFF4 /* Assets.xcassets in Resources */,
+				14EDE1BE217B559E0056EFF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EDE1C7217B559F0056EFF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EDE1D2217B559F0056EFF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14EDE1B1217B559E0056EFF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EDE1BB217B559E0056EFF4 /* ViewController.swift in Sources */,
+				14EDE1B9217B559E0056EFF4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EDE1C5217B559F0056EFF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EDE1CE217B559F0056EFF4 /* RocketScheduleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EDE1D0217B559F0056EFF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EDE1D9217B559F0056EFF4 /* RocketScheduleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14EDE1CB217B559F0056EFF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14EDE1B4217B559E0056EFF4 /* RocketSchedule */;
+			targetProxy = 14EDE1CA217B559F0056EFF4 /* PBXContainerItemProxy */;
+		};
+		14EDE1D6217B559F0056EFF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14EDE1B4217B559E0056EFF4 /* RocketSchedule */;
+			targetProxy = 14EDE1D5217B559F0056EFF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14EDE1BC217B559E0056EFF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14EDE1BD217B559E0056EFF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14EDE1C1217B559F0056EFF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14EDE1C2217B559F0056EFF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14EDE1DB217B559F0056EFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14EDE1DC217B559F0056EFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14EDE1DE217B559F0056EFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
+				INFOPLIST_FILE = RocketSchedule/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Peteleco.RocketSchedule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14EDE1DF217B559F0056EFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
+				INFOPLIST_FILE = RocketSchedule/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Peteleco.RocketSchedule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14EDE1E1217B559F0056EFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
+				INFOPLIST_FILE = RocketScheduleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Peteleco.RocketScheduleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RocketSchedule.app/RocketSchedule";
+			};
+			name = Debug;
+		};
+		14EDE1E2217B559F0056EFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
+				INFOPLIST_FILE = RocketScheduleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Peteleco.RocketScheduleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RocketSchedule.app/RocketSchedule";
+			};
+			name = Release;
+		};
+		14EDE1E4217B559F0056EFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
+				INFOPLIST_FILE = RocketScheduleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Peteleco.RocketScheduleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RocketSchedule;
+			};
+			name = Debug;
+		};
+		14EDE1E5217B559F0056EFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
+				INFOPLIST_FILE = RocketScheduleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Peteleco.RocketScheduleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RocketSchedule;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14EDE1B0217B559E0056EFF4 /* Build configuration list for PBXProject "RocketSchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EDE1DB217B559F0056EFF4 /* Debug */,
+				14EDE1DC217B559F0056EFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EDE1DD217B559F0056EFF4 /* Build configuration list for PBXNativeTarget "RocketSchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EDE1DE217B559F0056EFF4 /* Debug */,
+				14EDE1DF217B559F0056EFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EDE1E0217B559F0056EFF4 /* Build configuration list for PBXNativeTarget "RocketScheduleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EDE1E1217B559F0056EFF4 /* Debug */,
+				14EDE1E2217B559F0056EFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EDE1E3217B559F0056EFF4 /* Build configuration list for PBXNativeTarget "RocketScheduleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EDE1E4217B559F0056EFF4 /* Debug */,
+				14EDE1E5217B559F0056EFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14EDE1AD217B559E0056EFF4 /* Project object */;
+}
