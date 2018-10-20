@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getInfos() { (info) in
+        getSatellitePosition(id: 25544) { (info) in
             print(info)
         }
     }
