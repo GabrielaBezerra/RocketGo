@@ -11,14 +11,34 @@ import UIKit
 class LaunchListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyStateLabel: UILabel!
     
     var launches: [Launche] = []
     var imgs: [String : UIImage] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        if Connectivity.isConnectedToNetwork() {
+           loadData()
+            emptyStateLabel.isHidden = true
+        } else {
+            emptyStateLabel.isHidden = false
+        }
+        
+        setGradientToView(view: self.view)
+        tableView.backgroundColor = .clear
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = .none
+        
+        let launchNib = UINib(nibName: "LaunchTableViewCell", bundle: .main)
+        tableView.register(launchNib, forCellReuseIdentifier: LaunchTableViewCell.identifier)
+    }
+    
+    func loadData() {
         let query = GetLaunchesQuery(locationId: nil, name: nil, startDate: Date.from(year: 2018, month: 06, day: 01), endDate: nil)
         
         getLaunches(query: query) { (launches) in
@@ -39,23 +59,6 @@ class LaunchListViewController: UIViewController {
                 }
             }
         }
-
-//        getLaunches(query: GetLaunchesQuery(locationId: nil, name: nil, startDate: nil, endDate: nil)) { (launchs) in
-//            self.launches = launchs
-//            self.tableView.reloadData()
-//        }
-
-        
-        setGradientToView(view: self.view)
-        tableView.backgroundColor = .clear
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        tableView.separatorStyle = .none
-        
-        let launchNib = UINib(nibName: "LaunchTableViewCell", bundle: .main)
-        tableView.register(launchNib, forCellReuseIdentifier: LaunchTableViewCell.identifier)
     }
     
     func setGradientToView(view: UIView) {

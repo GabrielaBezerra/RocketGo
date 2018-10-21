@@ -56,12 +56,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Connection :(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USQ-Uf-Ek6">
+                                <rect key="frame" x="0.0" y="200" width="375" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NaN-mi-9Qg" firstAttribute="leading" secondItem="uX2-bH-MRn" secondAttribute="leading" id="1ro-qs-8qo"/>
+                            <constraint firstItem="uX2-bH-MRn" firstAttribute="trailing" secondItem="USQ-Uf-Ek6" secondAttribute="trailing" id="CoM-aa-oQv"/>
+                            <constraint firstItem="USQ-Uf-Ek6" firstAttribute="leading" secondItem="uX2-bH-MRn" secondAttribute="leading" id="GIf-ua-ll6"/>
+                            <constraint firstItem="USQ-Uf-Ek6" firstAttribute="top" secondItem="uX2-bH-MRn" secondAttribute="top" constant="200" id="TDu-Iy-Wlc"/>
                             <constraint firstItem="NaN-mi-9Qg" firstAttribute="top" secondItem="uX2-bH-MRn" secondAttribute="top" id="Zsd-Gf-Cn1"/>
                             <constraint firstItem="NaN-mi-9Qg" firstAttribute="bottom" secondItem="uX2-bH-MRn" secondAttribute="bottom" id="mtG-HX-gPp"/>
+                            <constraint firstItem="uX2-bH-MRn" firstAttribute="bottom" secondItem="USQ-Uf-Ek6" secondAttribute="bottom" constant="258" id="u3j-NH-vtK"/>
                             <constraint firstItem="NaN-mi-9Qg" firstAttribute="trailing" secondItem="uX2-bH-MRn" secondAttribute="trailing" id="x42-7R-lVh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uX2-bH-MRn"/>
@@ -69,6 +79,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="dPY-JS-Plb"/>
                     <navigationItem key="navigationItem" title="Rocket Go" largeTitleDisplayMode="always" id="SgI-jw-IIm"/>
                     <connections>
+                        <outlet property="emptyStateLabel" destination="USQ-Uf-Ek6" id="Okd-RP-DKX"/>
                         <outlet property="tableView" destination="NaN-mi-9Qg" id="Olo-sh-t2u"/>
                         <segue destination="FBd-ox-TOC" kind="show" identifier="launchDetail" id="rEc-sq-gVN"/>
                     </connections>
@@ -151,11 +162,11 @@
             </objects>
             <point key="canvasLocation" x="-791" y="-819"/>
         </scene>
-        <!--Launches-->
+        <!--Satellites-->
         <scene sceneID="JBp-ez-Sgz">
             <objects>
                 <navigationController id="SLd-3G-lJo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Launches" id="CS4-V6-cgU"/>
+                    <tabBarItem key="tabBarItem" title="Satellites" id="CS4-V6-cgU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="TC8-OJ-REX">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
