@@ -10,7 +10,23 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-func getLocationIds(name: String, callback: @escaping ([Int]) -> Void) {
+/*
+ EXEMPLO:
+
+ getLaunches(
+    query: GetLaunchesQuery(
+        locationId: nil,
+        name: nil,
+        startDate: Date.from(year: 2018, month: 01, day: 01),
+        endDate: Date.from(year: 2018, month: 06, day: 01)
+    ),
+        locationName: "japan"
+    ) { launches in
+        print(launches)
+    }
+ */
+
+fileprivate func getLocationIds(name: String, callback: @escaping ([Int]) -> Void) {
     Alamofire
         .request("https://launchlibrary.net/1.4/location?name=\(name)")
         .responseJSON { dataResponse in
@@ -23,11 +39,12 @@ func getLocationIds(name: String, callback: @escaping ([Int]) -> Void) {
     }
 }
 
+/// Cria a query de busca de lançamentos
 struct GetLaunchesQuery {
-    let locationId: Int?
-    let name: String?
-    let startDate: Date?
-    let endDate: Date?
+    let locationId: Int? // Deixa como nil. Se quiser filtrar por localização, use a função getLaunches(query:locationName:callback)
+    let name: String? // Nome do lançamento
+    let startDate: Date? // Data de início
+    let endDate: Date? // Data de fim
 
     func toParameters() -> Parameters {
         let formatter = DateFormatter()
@@ -58,6 +75,7 @@ struct GetLaunchesQuery {
     }
 }
 
+/// Struct retornada pela busca de lançamento
 struct Launche {
     let launcheName: String
     let missionName: String
@@ -72,6 +90,7 @@ struct Launche {
     let json: JSON
 }
 
+/// Struct com a posição do satelite
 struct SatellitePosition {
     let name: String
 
@@ -86,6 +105,7 @@ struct SatellitePosition {
     let json: JSON
 }
 
+/// Buscar lançamentos
 func getLaunches(query: GetLaunchesQuery, callback: @escaping ([Launche]) -> ()) {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyyMMdd'T'HHmmssZ"
@@ -116,6 +136,7 @@ func getLaunches(query: GetLaunchesQuery, callback: @escaping ([Launche]) -> ())
     }
 }
 
+/// Buscar lançamentos, filtrando por uma localização
 func getLaunches(query: GetLaunchesQuery, locationName: String, callback: @escaping ([Launche]) -> ()) {
     getLocationIds(name: locationName) { ids in
         var callbackCount = 0
@@ -141,6 +162,7 @@ func getLaunches(query: GetLaunchesQuery, locationName: String, callback: @escap
     }
 }
 
+/// Buscar posição de um determinaod satélite. O *id* do satélite é definido de acordo com a N2YO, por exemplo, 25544 é da estação espacial internacional.
 func getSatellitePosition(id satelliteId: Int, callback: @escaping (SatellitePosition) -> ()) {
     Alamofire.request(
         "https://www.n2yo.com/rest/v1/satellite/positions/\(satelliteId)/-3.71722/-38.54306/25/2&apiKey=47EHLN-28QXHF-LEG64C-3WHU"

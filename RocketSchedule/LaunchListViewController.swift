@@ -15,18 +15,6 @@ class LaunchListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getLaunches(
-            query: GetLaunchesQuery(
-                locationId: nil,
-                name: nil,
-                startDate: Date.from(year: 2018, month: 01, day: 01),
-                endDate: Date.from(year: 2018, month: 06, day: 01)
-            ),
-            locationName: "japan"
-        ) { (info) in
-            print(info)
-        }
-
         setGradientToView(view: self.view)
         tableView.backgroundColor = .clear
         
