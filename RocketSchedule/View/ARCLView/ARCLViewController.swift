@@ -85,11 +85,11 @@ class ARCLViewController: UIViewController {
     var bg: UIView! = nil
     
     func customView() -> UIView {
-        let vieww = UIView(frame: CGRect(x: self.view.center.x, y: self.view.center.y, width: 180, height: 100))
+        let vieww = UIView(frame: CGRect(x: self.view.center.x, y: self.view.center.y, width: 180, height: 110))
         vieww.backgroundColor = UIColor.init(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
         vieww.layer.cornerRadius = 3
         
-        let label = UILabel(frame: CGRect(x: 10, y: 10, width: vieww.frame.width-20, height: vieww.frame.height/2))
+        let label = UILabel(frame: CGRect(x: 10, y: 10, width: vieww.frame.width-20, height: vieww.frame.height/3))
         label.textColor = .black
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.7
@@ -97,26 +97,36 @@ class ARCLViewController: UIViewController {
         label.textAlignment = .center
         label.text = launch.launcheName
         
-        let bframe = CGRect(x: 0, y: label.frame.maxY, width: vieww.frame.width, height: vieww.frame.height/2)
-        let button = UIButton(type: .system)
-        button.frame = bframe
-        button.isUserInteractionEnabled = true
-        button.setTitle("Live Stream", for: .normal)
-        button.addTarget(self, action: #selector(openWebView), for: .touchDown)
+        let slabel = UILabel(frame: CGRect(x: 10, y: label.frame.maxY, width: vieww.frame.width-20, height: vieww.frame.height/2))
+        slabel.textColor = .gray
+        slabel.adjustsFontSizeToFitWidth = true
+        slabel.minimumScaleFactor = 0.7
+        slabel.numberOfLines = 2
+        slabel.textAlignment = .center
+        slabel.text = launch.locationName
         
-        let b2frame = CGRect(x: 0, y: label.frame.maxY, width: vieww.frame.width, height: vieww.frame.height/2)
-        let button2 = UIButton(type: .system)
-        button2.frame = b2frame
-        button2.isEnabled = false
-        button2.setTitle("Video Unavailable", for: .normal)
-        button2.addTarget(self, action: #selector(openWebView), for: .touchDown)
+//        let bframe = CGRect(x: 0, y: label.frame.maxY, width: vieww.frame.width, height: vieww.frame.height/2)
+//        let button = UIButton(type: .system)
+//        button.frame = bframe
+//        button.isUserInteractionEnabled = true
+//        button.setTitle("Live Stream", for: .normal)
+//        button.addTarget(self, action: #selector(openWebView), for: .touchDown)
+//
+//        let b2frame = CGRect(x: 0, y: label.frame.maxY, width: vieww.frame.width, height: vieww.frame.height/2)
+//        let button2 = UIButton(type: .system)
+//        button2.frame = b2frame
+//        button2.isEnabled = false
+//        button2.setTitle("Video Unavailable", for: .normal)
+//        button2.addTarget(self, action: #selector(openWebView), for: .touchDown)
         
         vieww.addSubview(label)
-        if launch.streamUrl != "null" {
-            vieww.addSubview(button)
-        } else {
-            vieww.addSubview(button2)
-        }
+        vieww.addSubview(slabel)
+        
+//        if launch.streamUrl != "null" {
+//            vieww.addSubview(button)
+//        } else {
+//            vieww.addSubview(button2)
+//        }
         return vieww
     }
     
