@@ -16,13 +16,13 @@ class ImageTableViewCell: UITableViewCell {
     
     var imgURL: String! {
         didSet {
-            getImage(url: imgURL) { (image, error, response) in
-                if error == nil {
-                    DispatchQueue.main.async {
-                        self.imageVw.image = image
-                    }
-                }
-            }
+//            getImage(url: imgURL) { (image, error, response) in
+//                if error == nil {
+//                    DispatchQueue.main.async {
+//                        self.imageVw.image = image
+//                    }
+//                }
+//            }
         }
     }
     

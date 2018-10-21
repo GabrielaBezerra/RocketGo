@@ -39,8 +39,8 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier) as! ImageTableViewCell
-            cell.imageVw.backgroundColor = .lightGray
-            cell.imageVw.image = launch.image
+            //cell.imageVw.backgroundColor = .lightGray
+            //cell.imageVw.image = launch.image
             return cell
         }
         

@@ -13,10 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        getInfos() { (info) in
-            print(info)
-        }
     }
 
 

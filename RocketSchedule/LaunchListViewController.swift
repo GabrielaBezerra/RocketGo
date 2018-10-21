@@ -16,19 +16,22 @@ class LaunchListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
-        getInfos { (lanche) in
-            self.launches.append(lanche)
-            self.launches.append(lanche)
-            print(lanche.latitude)
-            print(lanche.longitude)
-            self.launches.append(lanche)
-            self.launches.append(lanche)
-            self.launches.append(lanche)
-            self.launches.append(lanche)
-            self.launches.append(lanche)
+        let query = GetLaunchesQuery(locationId: nil, name: nil, startDate: Date.from(year: 2018, month: 06, day: 01), endDate: nil)
+        
+        getLaunches(query: query) { (launches) in
+            self.launches = launches
+            let _ = self.launches.popLast()
             self.tableView.reloadData()
+            print(launches.count)
         }
+
+//        getLaunches(query: GetLaunchesQuery(locationId: nil, name: nil, startDate: nil, endDate: nil)) { (launchs) in
+//            self.launches = launchs
+//            self.tableView.reloadData()
+//        }
+
         
         setGradientToView(view: self.view)
         tableView.backgroundColor = .clear
