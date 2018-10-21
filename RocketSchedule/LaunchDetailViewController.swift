@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,6 +17,9 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
     
     var titles: [String] = []
     var subtitles: [String] = []
+    
+    var wk: WKWebView! = nil
+    var bg: UIView! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,7 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if launch.streamUrl != "null" { return 4 }
         return 3
     }
     
@@ -55,9 +60,19 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
         return cell
         }
         
+        if indexPath.row == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCell.identifier) as! ButtonTableViewCell
+            cell.launch = launch
+            cell.button.setTitle("Visit LiveStream Site", for: .normal)
+            cell.action = {
+                self.openWebView()
+            }
+            return cell
+        }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCell.identifier) as! ButtonTableViewCell
         cell.launch = launch
+        cell.button.setTitle("See Location on Camera", for: .normal)
         cell.action = {
             self.performSegue(withIdentifier: "mapModalSegue", sender: self.launch)
         }
@@ -69,6 +84,33 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
         if let destiny = segue.destination as? ARCLViewController, let launch = sender as? Launche {
             destiny.launch = launch
         }
+    }
+    
+    @objc func openWebView() {
+        wk = WKWebView(frame: self.view.frame.applying(CGAffineTransform.init(scaleX: 1, y: 0.8)))
+        wk.layer.cornerRadius = 7
+        wk.center = UIApplication.shared.keyWindow!.center
+        wk.center.y += 5
+        wk.load(URLRequest(url: URL(string: launch.streamUrl)!))
+        
+        bg = UIView(frame: self.view.frame)
+        bg.backgroundColor = .black
+        bg.alpha = 0.2
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismisswk))
+        bg.addGestureRecognizer(tap)
+        
+        let back = UISwipeGestureRecognizer(target: self, action: #selector(dismisswk))
+        back.direction = .right
+        wk.addGestureRecognizer(back)
+        
+        self.view.addSubview(bg)
+        self.view.addSubview(wk)
+    }
+    
+    @objc func dismisswk() {
+        wk?.removeFromSuperview()
+        bg?.removeFromSuperview()
     }
     
 }
