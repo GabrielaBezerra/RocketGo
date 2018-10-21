@@ -12,6 +12,7 @@ import CoreLocation
 
 class ARCLViewController: UIViewController {
     var sceneLocationView = SceneLocationView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -112,7 +112,7 @@
         <!--View Controller-->
         <scene sceneID="R1R-Np-Te8">
             <objects>
-                <viewController id="0HM-fv-yXw" sceneMemberID="viewController">
+                <viewController id="0HM-fv-yXw" customClass="ARCLViewController" customModule="RocketSchedule" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a6E-gC-iCl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
