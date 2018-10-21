@@ -19,7 +19,8 @@ class LaunchListViewController: UIViewController {
         super.viewDidLoad()
 
         
-        let query = GetLaunchesQuery(locationId: nil, name: nil, startDate: Date.from(year: 2018, month: 06, day: 01), endDate: nil)
+        //let query = GetLaunchesQuery(locationId: nil, name: nil, startDate: Date.from(year: 2018, month: 06, day: 01), endDate: nil)
+        let query = GetLaunchesQuery(locationId: nil, name: nil, startDate: nil, endDate: nil)
         
         getLaunches(query: query) { (launches) in
             self.launches = launches
@@ -97,8 +98,9 @@ extension LaunchListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.dateLabel.text = launches[indexPath.row].isoDate.description(with: Locale(identifier: "en-us"))
         cell.titleLabel.text = launches[indexPath.row].missionName
         cell.descriptionLabel.text = launches[indexPath.row].locationName
-        let img = imgs["\(indexPath.row)"]
-        cell.imgView.image = img
+        if let img = imgs["\(indexPath.row)"] {
+            cell.imgView.image = img
+        }
         //"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         return cell
     }

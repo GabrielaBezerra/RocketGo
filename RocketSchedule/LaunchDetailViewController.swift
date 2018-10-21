@@ -22,8 +22,8 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
         tableView.delegate = self
         tableView.dataSource = self
         
-        let imgnib = UINib(nibName: "MapTableViewCell", bundle: .main)
-        tableView.register(imgnib, forCellReuseIdentifier: MapTableViewCell.identifier)
+        let mapnib = UINib(nibName: "MapTableViewCell", bundle: .main)
+        tableView.register(mapnib, forCellReuseIdentifier: MapTableViewCell.identifier)
         
         let detailnib = UINib(nibName: "LaunchDetailTableViewCell", bundle: .main)
         tableView.register(detailnib, forCellReuseIdentifier: LaunchDetailTableViewCell.identifier)
@@ -38,7 +38,11 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: MapTableViewCell.identifier) as! MapTableViewCell
+            cell.latitude = launch.latitude
+            cell.longitude = launch.longitude
+            
+            return cell
         }
         
         if indexPath.row == 1 {

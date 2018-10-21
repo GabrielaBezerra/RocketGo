@@ -25,7 +25,7 @@ class ButtonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        button.layer.cornerRadius = 60
+        button.layer.cornerRadius = 7
     }
     
 }
