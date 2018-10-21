@@ -11,6 +11,8 @@
 		14689278217C2A8800FC59D7 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14689276217C2A8800FC59D7 /* MapTableViewCell.swift */; };
 		14689279217C2A8800FC59D7 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14689277217C2A8800FC59D7 /* MapTableViewCell.xib */; };
 		1468927C217C368400FC59D7 /* SatelliteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468927B217C368400FC59D7 /* SatelliteListViewController.swift */; };
+		1468927E217C46AC00FC59D7 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468927D217C46AC00FC59D7 /* Connectivity.swift */; };
+		14689280217C476700FC59D7 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468927F217C476700FC59D7 /* Alert.swift */; };
 		14EDE1B9217B559E0056EFF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1B8217B559E0056EFF4 /* AppDelegate.swift */; };
 		14EDE1BB217B559E0056EFF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1BA217B559E0056EFF4 /* ViewController.swift */; };
 		14EDE1C0217B559F0056EFF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE1BF217B559F0056EFF4 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		14689276217C2A8800FC59D7 /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		14689277217C2A8800FC59D7 /* MapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
 		1468927B217C368400FC59D7 /* SatelliteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteListViewController.swift; sourceTree = "<group>"; };
+		1468927D217C46AC00FC59D7 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		1468927F217C476700FC59D7 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		14EDE1B5217B559E0056EFF4 /* RocketSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EDE1B8217B559E0056EFF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14EDE1BA217B559E0056EFF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,14 +159,15 @@
 			children = (
 				14EDE1B8217B559E0056EFF4 /* AppDelegate.swift */,
 				14EDE1BA217B559E0056EFF4 /* ViewController.swift */,
-				14EDE1FA217B7DE60056EFF4 /* LaunchListViewController.swift */,
 				1468927B217C368400FC59D7 /* SatelliteListViewController.swift */,
+				14EDE1FA217B7DE60056EFF4 /* LaunchListViewController.swift */,
 				14EDE1FC217B910E0056EFF4 /* LaunchDetailViewController.swift */,
 				14EDE1BF217B559F0056EFF4 /* Assets.xcassets */,
 				14EDE1EE217B7DDC0056EFF4 /* View */,
 				14EDE1C4217B559F0056EFF4 /* Info.plist */,
 				89FE78B6217B641B00C04B3F /* Network.swift */,
 				89FE78B8217B995F00C04B3F /* Extensions.swift */,
+				1468927D217C46AC00FC59D7 /* Connectivity.swift */,
 			);
 			path = RocketSchedule;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				14EDE1F3217B7DDC0056EFF4 /* LaunchTableViewCell */,
 				14EDE211217BB25F0056EFF4 /* ButtonTableViewCell */,
 				14689274217C250700FC59D7 /* LoadingAnimation.swift */,
+				1468927F217C476700FC59D7 /* Alert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,9 +486,11 @@
 				14EDE20F217BB25B0056EFF4 /* ButtonTableViewCell.swift in Sources */,
 				14EDE1BB217B559E0056EFF4 /* ViewController.swift in Sources */,
 				89FE78B9217B995F00C04B3F /* Extensions.swift in Sources */,
+				14689280217C476700FC59D7 /* Alert.swift in Sources */,
 				14EDE1B9217B559E0056EFF4 /* AppDelegate.swift in Sources */,
 				14EDE20B217BA28A0056EFF4 /* LaunchDetailTableViewCell.swift in Sources */,
 				14689275217C250700FC59D7 /* LoadingAnimation.swift in Sources */,
+				1468927E217C46AC00FC59D7 /* Connectivity.swift in Sources */,
 				1468927C217C368400FC59D7 /* SatelliteListViewController.swift in Sources */,
 				14689278217C2A8800FC59D7 /* MapTableViewCell.swift in Sources */,
 				14EDE1F8217B7DDC0056EFF4 /* LaunchTableViewCell.swift in Sources */,
