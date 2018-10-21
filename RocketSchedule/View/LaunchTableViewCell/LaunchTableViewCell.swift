@@ -16,6 +16,7 @@ class LaunchTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +29,7 @@ class LaunchTableViewCell: UITableViewCell {
         view.backgroundColor = .clear
         self.backgroundView = view
         self.contentView.backgroundColor = .clear
+        self.imgView.layer.cornerRadius = 35
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

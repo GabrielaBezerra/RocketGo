@@ -13,6 +13,7 @@ class LaunchListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var launches: [Launche] = []
+    var imgs: [String : UIImage] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,18 @@ class LaunchListViewController: UIViewController {
             let _ = self.launches.popLast()
             self.tableView.reloadData()
             print(launches.count)
+            for (index, l) in launches.enumerated() {
+                DispatchQueue.main.async {
+                    getImage(url: l.imageUrl, index: "\(index)", completion: { (img, index, svg, response) in
+                        if let img = img {
+                            self.imgs[index] = img
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    })
+                }
+            }
         }
 
 //        getLaunches(query: GetLaunchesQuery(locationId: nil, name: nil, startDate: nil, endDate: nil)) { (launchs) in
@@ -83,7 +96,9 @@ extension LaunchListViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: LaunchTableViewCell.identifier) as! LaunchTableViewCell
         cell.dateLabel.text = launches[indexPath.row].isoDate.description(with: Locale(identifier: "en-us"))
         cell.titleLabel.text = launches[indexPath.row].missionName
-        cell.descriptionLabel.text = launches[indexPath.row].missionDescription
+        cell.descriptionLabel.text = launches[indexPath.row].locationName
+        let img = imgs["\(indexPath.row)"]
+        cell.imgView.image = img
         //"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         return cell
     }

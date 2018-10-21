@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14689275217C250700FC59D7 /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14689274217C250700FC59D7 /* LoadingAnimation.swift */; };
 		14EDE1B9217B559E0056EFF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1B8217B559E0056EFF4 /* AppDelegate.swift */; };
 		14EDE1BB217B559E0056EFF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1BA217B559E0056EFF4 /* ViewController.swift */; };
 		14EDE1C0217B559F0056EFF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE1BF217B559F0056EFF4 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		03259FBA144353A44D368BDB /* Pods-RocketScheduleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketScheduleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocketScheduleUITests/Pods-RocketScheduleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		14689274217C250700FC59D7 /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
 		14EDE1B5217B559E0056EFF4 /* RocketSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EDE1B8217B559E0056EFF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14EDE1BA217B559E0056EFF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				14EDE1F3217B7DDC0056EFF4 /* LaunchTableViewCell */,
 				14EDE202217B92820056EFF4 /* ImageTableViewCell */,
 				14EDE211217BB25F0056EFF4 /* ButtonTableViewCell */,
+				14689274217C250700FC59D7 /* LoadingAnimation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				89FE78B9217B995F00C04B3F /* Extensions.swift in Sources */,
 				14EDE1B9217B559E0056EFF4 /* AppDelegate.swift in Sources */,
 				14EDE20B217BA28A0056EFF4 /* LaunchDetailTableViewCell.swift in Sources */,
+				14689275217C250700FC59D7 /* LoadingAnimation.swift in Sources */,
 				14EDE1F8217B7DDC0056EFF4 /* LaunchTableViewCell.swift in Sources */,
 				14EDE1FB217B7DE60056EFF4 /* LaunchListViewController.swift in Sources */,
 				14EDE1FD217B910E0056EFF4 /* LaunchDetailViewController.swift in Sources */,

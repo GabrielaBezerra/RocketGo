@@ -82,7 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="uX2-bH-MRn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="dPY-JS-Plb"/>
-                    <navigationItem key="navigationItem" title="Launches" largeTitleDisplayMode="always" id="SgI-jw-IIm"/>
+                    <navigationItem key="navigationItem" title="Rocket Go" largeTitleDisplayMode="always" id="SgI-jw-IIm"/>
                     <connections>
                         <outlet property="tableView" destination="NaN-mi-9Qg" id="Olo-sh-t2u"/>
                         <segue destination="FBd-ox-TOC" kind="show" identifier="launchDetail" id="rEc-sq-gVN"/>

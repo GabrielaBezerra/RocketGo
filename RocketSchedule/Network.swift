@@ -183,3 +183,37 @@ func getSatellitePosition(id satelliteId: Int, callback: @escaping (SatellitePos
             callback(satellitePosition)
     }
 }
+
+
+func getImage(url: String, index: String, completion: @escaping (UIImage?, String, String?, URLResponse) -> Void) {
+    if let pictureURL = URL(string: url) {
+        let session = URLSession(configuration: .default)
+        
+        let downloadPicTask = session.dataTask(with: pictureURL) { (data, response, error) in
+            if let e = error {
+                print("Error downloading picture: \(e)")
+            } else {
+                if let res = response as? HTTPURLResponse {
+                    //print("Downloaded picture with response code \(res.statusCode)")
+                    if let imageData = data {
+                        if let image = UIImage(data: imageData) {
+                            completion(image, index, nil, res)
+                        } else {
+                            //get SVG response and send it through completion
+                            if let svg = try? String(contentsOf: pictureURL) {
+                                completion(nil, index, svg, res)
+                            }
+                        }
+                    } else {
+                        print("Couldn't get image: ImageData is nil")
+                    }
+                } else {
+                    print("Couldn't get response code for some reason")
+                }
+            }
+        }
+        downloadPicTask.resume()
+    } else {
+        print("Couldn't load image: malformed URL")
+    }
+}
