@@ -41,9 +41,11 @@ class SatelliteRouteViewController: UIViewController, MKMapViewDelegate {
         
         let b = UIButton(type: .custom)
         b.setTitle("X", for: .normal)
-        b.tintColor = .white
-        b.setTitleColor(.white, for: .normal)
-        b.frame = CGRect(x: self.view.frame.maxX*0.8, y: self.view.frame.minY*2.2, width: 50, height: 50)
+        b.backgroundColor = UIColor(white: 1, alpha: 0.75)
+        b.layer.cornerRadius = 5
+        b.tintColor = .black
+        b.setTitleColor(.black, for: .normal)
+        b.frame = CGRect(x: self.view.frame.maxX*0.87, y: 25, width: 30, height: 30)
         b.addTarget(self, action: #selector(dism), for: .touchDown)
         self.view.addSubview(b)
 

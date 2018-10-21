@@ -12,7 +12,7 @@ class SatelliteListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var satellites: [String] = ["Morceguinho", "BatSatellite"]
+    var satellites: [String] = ["International Space Station"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,10 @@ class SatelliteListViewController: UIViewController {
     func setGradientToView(view: UIView) {
         let gradient: CAGradientLayer = CAGradientLayer()
         
-        gradient.colors = [UIColor(red: 0.2, green: 0.2, blue: 0.6, alpha: 0.8).cgColor, UIColor(red: 0.4, green: 0.3, blue: 0.5, alpha: 0.8).cgColor]
+        //gradient.colors = [UIColor(red: 0.2, green: 0.2, blue: 0.6, alpha: 0.8).cgColor, UIColor(red: 0.4, green: 0.3, blue: 0.5, alpha: 0.8).cgColor]
+        gradient.colors = [
+            UIColor(red: 0.6, green: 0.3, blue: 0.5, alpha: 0.8).cgColor,
+            UIColor(red: 0.2, green: 0.2, blue: 0.6, alpha: 0.8).cgColor]
         //gradient.colors = [UIColor(red: 1, green: 140/255, blue: 0, alpha: 0.8).cgColor, UIColor(red: 1, green: 165/255, blue: 0, alpha: 0.8).cgColor]
         gradient.locations = [0.0 , 1.0]
         gradient.startPoint = CGPoint(x: 1.0, y: 0.0)
@@ -67,7 +70,7 @@ extension SatelliteListViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: LaunchTableViewCell.identifier) as! LaunchTableViewCell
         cell.dateLabel.text = Date().description(with: Locale(identifier: "en-us"))
         cell.titleLabel.text = satellites[indexPath.row]
-        cell.descriptionLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        cell.descriptionLabel.text = "The International Space Station is a space station, or a habitable artificial satellite, in low Earth orbit. Its first component launched into orbit in 1998, and the last pressurised module was fitted in 2011. The station is expected to operate until at least 2028."
         return cell
     }
     

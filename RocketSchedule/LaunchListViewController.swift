@@ -45,7 +45,21 @@ class LaunchListViewController: UIViewController {
         let query = GetLaunchesQuery(locationId: nil, name: nil, startDate: nil, endDate: nil)
 
         getLaunches(query: query) { (launches) in
+            
             self.launches = launches
+            
+            for (i,l) in launches.enumerated() {
+                if l.missionName == "null" {
+                    self.launches[i].missionName = "Unknown"
+                }
+                if l.launcheName == "null" {
+                    self.launches[i].launcheName = "Unknown"
+                }
+                if l.missionDescription == "null" {
+                    self.launches[i].missionDescription = ""
+                }
+            }
+            
             let _ = self.launches.popLast()
             self.tableView.reloadData()
             print(launches.count)
@@ -120,7 +134,9 @@ class LaunchListViewController: UIViewController {
     func setGradientToView(view: UIView) {
         let gradient: CAGradientLayer = CAGradientLayer()
         
-        gradient.colors = [UIColor(red: 0.2, green: 0.2, blue: 0.6, alpha: 0.8).cgColor, UIColor(red: 0.4, green: 0.3, blue: 0.5, alpha: 0.8).cgColor]
+        gradient.colors = [
+            UIColor(red: 0.6, green: 0.3, blue: 0.5, alpha: 0.8).cgColor,
+            UIColor(red: 0.2, green: 0.2, blue: 0.6, alpha: 0.8).cgColor]
         //gradient.colors = [UIColor(red: 1, green: 140/255, blue: 0, alpha: 0.8).cgColor, UIColor(red: 1, green: 165/255, blue: 0, alpha: 0.8).cgColor]
         gradient.locations = [0.0 , 1.0]
         gradient.startPoint = CGPoint(x: 1.0, y: 0.0)

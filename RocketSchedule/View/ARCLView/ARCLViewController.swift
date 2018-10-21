@@ -43,25 +43,6 @@ class ARCLViewController: UIViewController {
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            if(touch.view == self.sceneLocationView){
-                print("touch working")
-                
-                if launch.streamUrl != "null" {
-                    let viewTouchLocation:CGPoint = touch.location(in: sceneLocationView)
-                    guard let result = sceneLocationView.hitTest(viewTouchLocation, options: nil).first else {
-                        return
-                    }
-                    if let bottleNode = self.annotationNode, bottleNode.contains(result.node) {
-                        openWebView()
-                    }
-                }
-
-            }
-        }
-    }
-    
     @objc func dismi() {
         self.dismiss(animated: true, completion: nil)
     }
@@ -79,10 +60,6 @@ class ARCLViewController: UIViewController {
         
         sceneLocationView.frame = view.bounds
     }
-    
-
-    var wk: WKWebView! = nil
-    var bg: UIView! = nil
     
     func customView() -> UIView {
         let vieww = UIView(frame: CGRect(x: self.view.center.x, y: self.view.center.y, width: 180, height: 110))
@@ -105,56 +82,12 @@ class ARCLViewController: UIViewController {
         slabel.textAlignment = .center
         slabel.text = launch.locationName
         
-//        let bframe = CGRect(x: 0, y: label.frame.maxY, width: vieww.frame.width, height: vieww.frame.height/2)
-//        let button = UIButton(type: .system)
-//        button.frame = bframe
-//        button.isUserInteractionEnabled = true
-//        button.setTitle("Live Stream", for: .normal)
-//        button.addTarget(self, action: #selector(openWebView), for: .touchDown)
-//
-//        let b2frame = CGRect(x: 0, y: label.frame.maxY, width: vieww.frame.width, height: vieww.frame.height/2)
-//        let button2 = UIButton(type: .system)
-//        button2.frame = b2frame
-//        button2.isEnabled = false
-//        button2.setTitle("Video Unavailable", for: .normal)
-//        button2.addTarget(self, action: #selector(openWebView), for: .touchDown)
-        
         vieww.addSubview(label)
         vieww.addSubview(slabel)
-        
-//        if launch.streamUrl != "null" {
-//            vieww.addSubview(button)
-//        } else {
-//            vieww.addSubview(button2)
-//        }
+
         return vieww
     }
     
-    @objc func openWebView() {
-        wk = WKWebView(frame: self.view.frame.applying(CGAffineTransform.init(scaleX: 1, y: 1)))
-        wk.layer.cornerRadius = 7
-        wk.center = UIApplication.shared.keyWindow!.center
-        wk.load(URLRequest(url: URL(string: launch.streamUrl)!))
-        
-        bg = UIView(frame: self.view.frame)
-        bg.backgroundColor = .black
-        bg.alpha = 0.2
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismisswk))
-        bg.addGestureRecognizer(tap)
-        
-        let back = UISwipeGestureRecognizer(target: self, action: #selector(dismisswk))
-        back.direction = .right
-        wk.addGestureRecognizer(back)
-        
-        self.view.addSubview(bg)
-        self.view.addSubview(wk)
-    }
-    
-    @objc func dismisswk() {
-        wk?.removeFromSuperview()
-        bg?.removeFromSuperview()
-    }
 }
 
 extension UIImage {

@@ -74,9 +74,9 @@ struct GetLaunchesQuery {
 
 /// Struct retornada pela busca de lançamento
 struct Launche {
-    let launcheName: String
-    let missionName: String
-    let missionDescription: String
+    var launcheName: String
+    var missionName: String
+    var missionDescription: String
     let isoDate: Date
     let latitude: Double
     let longitude: Double
@@ -109,7 +109,7 @@ func getLaunches(query: GetLaunchesQuery, callback: @escaping ([Launche]) -> ())
     dateFormatter.dateFormat = "yyyyMMdd'T'HHmmssZ"
     
     Alamofire.request(
-        "https://launchlibrary.net/1.4/launch",
+        "https://launchlibrary.net/1.4/launch/?next=30",
         parameters: query.toParameters()
         ).responseJSON { dataResponse in
             let data = try! JSON(data: dataResponse.data!)

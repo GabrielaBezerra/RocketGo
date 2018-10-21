@@ -21,6 +21,14 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
     var wk: WKWebView! = nil
     var bg: UIView! = nil
     
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -87,10 +95,10 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @objc func openWebView() {
-        wk = WKWebView(frame: self.view.frame.applying(CGAffineTransform.init(scaleX: 1, y: 0.8)))
+        wk = WKWebView(frame: self.view.frame.applying(CGAffineTransform.init(scaleX: 1, y: 0.81)))
         wk.layer.cornerRadius = 7
         wk.center = UIApplication.shared.keyWindow!.center
-        wk.center.y += 5
+        wk.center.y += 10
         wk.load(URLRequest(url: URL(string: launch.streamUrl)!))
         
         bg = UIView(frame: self.view.frame)
