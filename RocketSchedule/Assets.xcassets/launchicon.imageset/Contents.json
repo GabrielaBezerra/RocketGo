@@ -2,7 +2,6 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "rocket-launch-rocket-take-off-nasa-73871.jpeg",
       "scale" : "1x"
     },
     {
@@ -11,6 +10,7 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "icons8-launch-90.png",
       "scale" : "3x"
     }
   ],
