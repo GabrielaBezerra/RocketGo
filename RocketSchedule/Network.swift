@@ -114,7 +114,6 @@ func getLaunches(query: GetLaunchesQuery, callback: @escaping ([Launche]) -> ())
         ).responseJSON { dataResponse in
             let data = try! JSON(data: dataResponse.data!)
             print(data["launches"][0].description)
-            //launch.json["agencies"]["infoURL"]
             let launches = data["launches"].map { (_, json) in
                 return Launche(
                     launcheName: "\(json["name"])",
@@ -126,7 +125,7 @@ func getLaunches(query: GetLaunchesQuery, callback: @escaping ([Launche]) -> ())
                     locationName: "\(json["location"]["name"])",
                     countryCode: "\(json["location"]["countryCode"])",
                     imageUrl: "\(json["rocket"]["imageURL"])",
-                    streamUrl: "\(json["agencies"]["infoURL"][4])",
+                    streamUrl: "\(json["location"]["pads"][0]["agencies"][0]["infoURLs"][3])",
                     json: json
                 )
             }
