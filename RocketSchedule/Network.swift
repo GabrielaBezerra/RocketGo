@@ -83,6 +83,7 @@ struct Launche {
     let locationName: String
     let countryCode: String
     let imageUrl: String
+    let streamUrl: String
     
     let json: JSON
 }
@@ -112,7 +113,7 @@ func getLaunches(query: GetLaunchesQuery, callback: @escaping ([Launche]) -> ())
         parameters: query.toParameters()
         ).responseJSON { dataResponse in
             let data = try! JSON(data: dataResponse.data!)
-            
+            print(data["launches"][0].description)
             let launches = data["launches"].map { (_, json) in
                 return Launche(
                     launcheName: "\(json["name"])",
@@ -124,7 +125,7 @@ func getLaunches(query: GetLaunchesQuery, callback: @escaping ([Launche]) -> ())
                     locationName: "\(json["location"]["name"])",
                     countryCode: "\(json["location"]["countryCode"])",
                     imageUrl: "\(json["rocket"]["imageURL"])",
-                    
+                    streamUrl: "\(json["location"]["pads"][0]["agencies"][0]["infoURLs"][3])",
                     json: json
                 )
             }

@@ -39,7 +39,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleRocket" translatesAutoresizingMaskIntoConstraints="NO" id="Fkc-Kf-33n">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleRocket" translatesAutoresizingMaskIntoConstraints="NO" id="Fkc-Kf-33n">
                                 <rect key="frame" x="10" y="11.5" width="73" height="72.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72.5" id="7Bg-T4-scw"/>

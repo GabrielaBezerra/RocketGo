@@ -220,7 +220,7 @@
                         <viewLayoutGuide key="safeArea" id="NxA-Ob-Hl0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="sop-tt-LjH"/>
-                    <navigationItem key="navigationItem" title="Sattelites" largeTitleDisplayMode="always" id="enJ-n6-M4F"/>
+                    <navigationItem key="navigationItem" title="Satellites" largeTitleDisplayMode="always" id="enJ-n6-M4F"/>
                     <connections>
                         <outlet property="tableView" destination="tGR-LF-AQx" id="3Ri-vE-gXp"/>
                         <segue destination="MJh-YX-ZfK" kind="presentation" identifier="satelliteSegue" id="pkW-08-rER"/>

@@ -24,6 +24,8 @@ class SatelliteRouteViewController: UIViewController, MKMapViewDelegate{
     var orbitPathPolyline: MKGeodesicPolyline! = nil
     
     var satellite: Satellite! = nil
+    var satelliteImage: MKAnnotationView! = nil
+    
     
     
     
@@ -35,15 +37,6 @@ class SatelliteRouteViewController: UIViewController, MKMapViewDelegate{
         
         mapView.delegate = self
         
-        //#Create Route Points (Presicion 0.7)
-        
-        let LAX = CLLocation(latitude: 33.9424955, longitude: -118.4080684)
-        let JFK = CLLocation(latitude: 40.6397511, longitude: -73.7789256)
-        
-        var coordinates = [LAX.coordinate, JFK.coordinate]
-        let geodesicPolyline = MKGeodesicPolyline(coordinates: &coordinates, count: coordinates.count)
-        
-        
 
         
         Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (ignora) in
@@ -53,14 +46,16 @@ class SatelliteRouteViewController: UIViewController, MKMapViewDelegate{
                 self.satelliteLocation = CLLocation(latitude: self.satelliteLocationLatitude, longitude: self.satelliteLocationLongitude)
                 print("\(String(describing: self.satelliteLocation.coordinate))")
                 if let s = self.satellite { self.mapView.removeAnnotation(s) }
-                self.satellite = Satellite(title: "101", coordinate: self.satelliteLocation.coordinate)
+                self.satellite = Satellite(title:"", coordinate: self.satelliteLocation.coordinate)
+
+                self.satelliteImage = MKAnnotationView(annotation: self.satellite, reuseIdentifier: nil)
+                self.satelliteImage.image = UIImage(named: "satelite.png")
                 self.mapView.addAnnotation(self.satellite)
+                self.mapView.setCenter(self.satelliteLocation.coordinate, animated: false )
                 
                 
             }
         }.fire()
-       
-        mapView.addOverlay(geodesicPolyline)
         
     }
     
@@ -81,6 +76,5 @@ class SatelliteRouteViewController: UIViewController, MKMapViewDelegate{
         
         return renderer
     }
-    
     
 }

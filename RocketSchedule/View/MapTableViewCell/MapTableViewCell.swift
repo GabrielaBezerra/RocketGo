@@ -15,20 +15,22 @@ class MapTableViewCell: UITableViewCell {
     
     @IBOutlet weak var mapView: MKMapView!
 
-    var latitude: String!
-    var longitude: String!
+    var latitude: Double!
+    var longitude: Double! {
+        didSet {
+            let cord = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let viewRegion = MKCoordinateRegion(center: cord, latitudinalMeters: 3000000, longitudinalMeters: 3000000)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = cord
+            mapView.addAnnotation(annotation)
+            mapView.setRegion(viewRegion, animated: false)
+            mapView.mapType = .mutedStandard
+            mapView.setCenter(cord, animated: true)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        let cord = CLLocationCoordinate2D(latitude: Double(latitude)!, longitude: Double(longitude)!)
-        let viewRegion = MKCoordinateRegion(center: cord, latitudinalMeters: 500, longitudinalMeters: 500)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = cord
-        mapView.addAnnotation(annotation)
-        mapView.setRegion(viewRegion, animated: false)
-        mapView.setCenter(cord, animated: true)
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
