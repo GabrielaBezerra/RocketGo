@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.7.3)
+  - ARCL (1.0.4)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - ARCL
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - ARCL
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  ARCL: 5fd2b0d7aabf91f15dbc0e8c510b25516b8a755a
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: f2964950bf4ad4bc2a8c5e076eaf03461d8bda5e
+PODFILE CHECKSUM: 224abd1e0300d0ae3afdcf7791440102265c7389
 
 COCOAPODS: 1.5.3

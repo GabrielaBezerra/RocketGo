@@ -22,8 +22,8 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
         tableView.delegate = self
         tableView.dataSource = self
         
-        let imgnib = UINib(nibName: "ImageTableViewCell", bundle: .main)
-        tableView.register(imgnib, forCellReuseIdentifier: ImageTableViewCell.identifier)
+        let imgnib = UINib(nibName: "MapTableViewCell", bundle: .main)
+        tableView.register(imgnib, forCellReuseIdentifier: MapTableViewCell.identifier)
         
         let detailnib = UINib(nibName: "LaunchDetailTableViewCell", bundle: .main)
         tableView.register(detailnib, forCellReuseIdentifier: LaunchDetailTableViewCell.identifier)
@@ -38,10 +38,7 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier) as! ImageTableViewCell
-            //cell.imageVw.backgroundColor = .lightGray
-            //cell.imageVw.image = launch.image
-            return cell
+            return UITableViewCell()
         }
         
         if indexPath.row == 1 {
@@ -57,6 +54,9 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCell.identifier) as! ButtonTableViewCell
         cell.launch = launch
+        cell.action = {
+            self.performSegue(withIdentifier: "mapModalSegue", sender: self.launch)
+        }
         return cell
         
     }

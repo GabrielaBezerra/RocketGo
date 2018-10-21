@@ -14,13 +14,12 @@ class ButtonTableViewCell: UITableViewCell {
     
     var launch: Launche!
     
-//    var action: ()->Void = {
-//        //performSegue
-//    }
     @IBOutlet weak var button: UIButton!
+
+    var action: ()->Void = { }
     
     @IBAction func action(_ sender: UIButton) {
-        //perform segue
+        action()
         print("Button disgraçado")
     }
     

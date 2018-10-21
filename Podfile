@@ -6,7 +6,7 @@ target 'RocketSchedule' do
   use_frameworks!
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON'
-
+  pod 'ARCL'
   # Pods for RocketSchedule
 
   target 'RocketScheduleTests' do
