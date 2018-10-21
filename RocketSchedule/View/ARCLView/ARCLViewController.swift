@@ -15,6 +15,7 @@ import SceneKit
 class ARCLViewController: UIViewController {
     
     var sceneLocationView = SceneLocationView()
+
     var annotationNode: LocationAnnotationNode! = nil
     var launch: Launche!
     
