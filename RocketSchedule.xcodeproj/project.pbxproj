@@ -29,6 +29,8 @@
 		14EDE20F217BB25B0056EFF4 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE20D217BB25B0056EFF4 /* ButtonTableViewCell.swift */; };
 		14EDE210217BB25B0056EFF4 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE20E217BB25B0056EFF4 /* ButtonTableViewCell.xib */; };
 		4A6FFDBF217C427700E5EF22 /* ARCLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FFDBE217C427700E5EF22 /* ARCLViewController.swift */; };
+		4A6FFDC2217C531E00E5EF22 /* SatelliteRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FFDC1217C531E00E5EF22 /* SatelliteRouteViewController.swift */; };
+		4A6FFDC4217C755700E5EF22 /* Satellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6FFDC3217C755700E5EF22 /* Satellite.swift */; };
 		664C898260670B758240EA8D /* Pods_RocketScheduleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E119CE4795E921F8160808FF /* Pods_RocketScheduleUITests.framework */; };
 		89FE78B7217B641B00C04B3F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE78B6217B641B00C04B3F /* Network.swift */; };
 		89FE78B9217B995F00C04B3F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE78B8217B995F00C04B3F /* Extensions.swift */; };
@@ -84,6 +86,8 @@
 		14EDE20E217BB25B0056EFF4 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
 		3AA0C701379163BBEB1514E8 /* Pods-RocketSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketSchedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketSchedule/Pods-RocketSchedule.debug.xcconfig"; sourceTree = "<group>"; };
 		4A6FFDBE217C427700E5EF22 /* ARCLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCLViewController.swift; sourceTree = "<group>"; };
+		4A6FFDC1217C531E00E5EF22 /* SatelliteRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteRouteViewController.swift; sourceTree = "<group>"; };
+		4A6FFDC3217C755700E5EF22 /* Satellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satellite.swift; sourceTree = "<group>"; };
 		4EEECE8753B00F2D80FDDAC3 /* Pods_RocketScheduleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketScheduleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B68A4BBD6952C3243B79FC7 /* Pods-RocketScheduleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketScheduleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketScheduleTests/Pods-RocketScheduleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		637A3D8845BA1885324BAD84 /* Pods_RocketSchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketSchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +197,7 @@
 		14EDE1EE217B7DDC0056EFF4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4A6FFDC0217C528900E5EF22 /* SatelliteRouteView */,
 				4A6FFDBD217C41F900E5EF22 /* ARCLView */,
 				14EDE1EF217B7DDC0056EFF4 /* LaunchScreen.storyboard */,
 				14EDE1F1217B7DDC0056EFF4 /* Main.storyboard */,
@@ -240,6 +245,15 @@
 				4A6FFDBE217C427700E5EF22 /* ARCLViewController.swift */,
 			);
 			path = ARCLView;
+			sourceTree = "<group>";
+		};
+		4A6FFDC0217C528900E5EF22 /* SatelliteRouteView */ = {
+			isa = PBXGroup;
+			children = (
+				4A6FFDC1217C531E00E5EF22 /* SatelliteRouteViewController.swift */,
+				4A6FFDC3217C755700E5EF22 /* Satellite.swift */,
+			);
+			path = SatelliteRouteView;
 			sourceTree = "<group>";
 		};
 		545E1573F449382E6FF5EC17 /* Frameworks */ = {
@@ -493,10 +507,12 @@
 				1468927E217C46AC00FC59D7 /* Connectivity.swift in Sources */,
 				1468927C217C368400FC59D7 /* SatelliteListViewController.swift in Sources */,
 				14689278217C2A8800FC59D7 /* MapTableViewCell.swift in Sources */,
+				4A6FFDC2217C531E00E5EF22 /* SatelliteRouteViewController.swift in Sources */,
 				14EDE1F8217B7DDC0056EFF4 /* LaunchTableViewCell.swift in Sources */,
 				14EDE1FB217B7DE60056EFF4 /* LaunchListViewController.swift in Sources */,
 				14EDE1FD217B910E0056EFF4 /* LaunchDetailViewController.swift in Sources */,
 				4A6FFDBF217C427700E5EF22 /* ARCLViewController.swift in Sources */,
+				4A6FFDC4217C755700E5EF22 /* Satellite.swift in Sources */,
 				89FE78B7217B641B00C04B3F /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
