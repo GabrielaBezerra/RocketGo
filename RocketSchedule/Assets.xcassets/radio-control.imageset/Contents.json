@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "radio-control.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "radio-control-2.png",
       "scale" : "2x"
     },
     {

@@ -24,6 +24,8 @@ class SatelliteRouteViewController: UIViewController, MKMapViewDelegate {
     var orbitPathPolyline: MKGeodesicPolyline! = nil
     
     var satellite: Satellite! = nil
+    var satelliteImage: MKAnnotationView! = nil
+    
     
     
     override var prefersStatusBarHidden: Bool {
@@ -37,24 +39,14 @@ class SatelliteRouteViewController: UIViewController, MKMapViewDelegate {
         
         mapView.delegate = self
         
-        //#Create Route Points (Presicion 0.7)
-        
-        let LAX = CLLocation(latitude: 33.9424955, longitude: -118.4080684)
-        let JFK = CLLocation(latitude: 40.6397511, longitude: -73.7789256)
-        
-        var coordinates = [LAX.coordinate, JFK.coordinate]
-        let geodesicPolyline = MKGeodesicPolyline(coordinates: &coordinates, count: coordinates.count)
-        
         let b = UIButton(type: .custom)
         b.setTitle("X", for: .normal)
-        b.tintColor = .black
-        b.setTitleColor(.black, for: .normal)
-        b.layer.cornerRadius = 5
-        b.backgroundColor = UIColor(white: 1, alpha: 0.75)
-        b.frame = CGRect(x: self.view.frame.maxX*0.8, y: self.view.frame.minY*0.2, width: 50, height: 50)
+        b.tintColor = .white
+        b.setTitleColor(.white, for: .normal)
+        b.frame = CGRect(x: self.view.frame.maxX*0.8, y: self.view.frame.minY*2.2, width: 50, height: 50)
         b.addTarget(self, action: #selector(dism), for: .touchDown)
         self.view.addSubview(b)
-        
+
         Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (ignora) in
             getSatellitePosition(id: 25544) { satpos in
                 self.satelliteLocationLatitude = satpos.latitudeA
@@ -62,15 +54,25 @@ class SatelliteRouteViewController: UIViewController, MKMapViewDelegate {
                 self.satelliteLocation = CLLocation(latitude: self.satelliteLocationLatitude, longitude: self.satelliteLocationLongitude)
                 print("\(String(describing: self.satelliteLocation.coordinate))")
                 if let s = self.satellite { self.mapView.removeAnnotation(s) }
-                self.satellite = Satellite(title: "101", coordinate: self.satelliteLocation.coordinate)
+                self.satellite = Satellite(title:"", coordinate: self.satelliteLocation.coordinate)
+
                 self.mapView.addAnnotation(self.satellite)
+                self.mapView.setCenter(self.satelliteLocation.coordinate, animated: false )
                 
                 
             }
         }.fire()
-       
-        mapView.addOverlay(geodesicPolyline)
         
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        self.satelliteImage = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        self.satelliteImage.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        var image = UIImage(named: "satellite.png")
+        image = image!.resize(size: CGSize(width: 50, height: 50))
+        self.satelliteImage.image = image
+
+        return self.satelliteImage
     }
     
     @objc func dism() {
@@ -92,6 +94,5 @@ class SatelliteRouteViewController: UIViewController, MKMapViewDelegate {
         
         return renderer
     }
-    
     
 }
