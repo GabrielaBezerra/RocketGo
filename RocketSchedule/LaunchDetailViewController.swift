@@ -65,4 +65,10 @@ class LaunchDetailViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destiny = segue.destination as? ARCLViewController, let launch = sender as? Launche {
+            destiny.launch = launch
+        }
+    }
+    
 }
