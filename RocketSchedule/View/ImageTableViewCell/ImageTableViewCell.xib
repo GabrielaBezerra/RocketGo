@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="216" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="RocketSchedule" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="215.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nfF-mG-0XL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="gLE-dU-Onf"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="nfF-mG-0XL" secondAttribute="trailing" id="D8z-7K-HM0"/>
+                    <constraint firstItem="nfF-mG-0XL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Mla-gt-tXn"/>
+                    <constraint firstAttribute="bottom" secondItem="nfF-mG-0XL" secondAttribute="bottom" constant="20" id="NgG-uP-82G"/>
+                    <constraint firstItem="nfF-mG-0XL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dpi-PC-eLY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageVw" destination="nfF-mG-0XL" id="4OH-Ar-dEU"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="7.1964017991004505"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -29,7 +29,7 @@ class LaunchTableViewCell: UITableViewCell {
         self.backgroundView = view
         self.contentView.backgroundColor = .clear
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

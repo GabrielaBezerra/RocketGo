@@ -29,10 +29,17 @@
         <scene sceneID="na8-zb-vS7">
             <objects>
                 <navigationController id="oGq-bP-7Ac" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="CwU-Z9-6QP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="CwU-Z9-6QP">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.39621682363013699" green="0.26407320205479451" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="mHf-FS-qvr" kind="relationship" relationship="rootViewController" id="xPR-Ke-sE8"/>
@@ -47,11 +54,11 @@
             <objects>
                 <viewController title="Launches" id="mHf-FS-qvr" customClass="LaunchListViewController" customModule="RocketSchedule" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="j4s-I6-Gjg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView opaque="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-mi-9Qg">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-mi-9Qg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="86" id="rMl-YO-D4U">
@@ -75,30 +82,46 @@
                         <viewLayoutGuide key="safeArea" id="uX2-bH-MRn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="dPY-JS-Plb"/>
-                    <navigationItem key="navigationItem" title="Launches" id="SgI-jw-IIm"/>
+                    <navigationItem key="navigationItem" title="Launches" largeTitleDisplayMode="always" id="SgI-jw-IIm"/>
                     <connections>
                         <outlet property="tableView" destination="NaN-mi-9Qg" id="Olo-sh-t2u"/>
-                        <segue destination="FBd-ox-TOC" kind="show" id="rEc-sq-gVN"/>
+                        <segue destination="FBd-ox-TOC" kind="show" identifier="launchDetail" id="rEc-sq-gVN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOo-2d-4iF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1260" y="-1216.6416791604199"/>
         </scene>
-        <!--View Controller-->
+        <!--Launch Detail View Controller-->
         <scene sceneID="qVL-lH-9op">
             <objects>
-                <viewController id="FBd-ox-TOC" sceneMemberID="viewController">
+                <viewController id="FBd-ox-TOC" customClass="LaunchDetailViewController" customModule="RocketSchedule" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BfN-aQ-Y4j">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wZh-7z-ZwW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wZh-7z-ZwW" firstAttribute="trailing" secondItem="Eb6-IB-6jh" secondAttribute="trailing" id="6d8-7u-oZg"/>
+                            <constraint firstItem="wZh-7z-ZwW" firstAttribute="bottom" secondItem="Eb6-IB-6jh" secondAttribute="bottom" id="YuH-Yu-qtp"/>
+                            <constraint firstItem="wZh-7z-ZwW" firstAttribute="top" secondItem="Eb6-IB-6jh" secondAttribute="top" id="lQQ-G3-I0b"/>
+                            <constraint firstItem="wZh-7z-ZwW" firstAttribute="leading" secondItem="Eb6-IB-6jh" secondAttribute="leading" id="ptY-Aa-Wn6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Eb6-IB-6jh"/>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="daM-NU-xC9"/>
+                    <connections>
+                        <outlet property="tableView" destination="wZh-7z-ZwW" id="Et3-pp-Ibb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Kp-Ls-ipI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2078" y="-1217"/>
+            <point key="canvasLocation" x="2077.5999999999999" y="-1217.5412293853074"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aVD-7G-xSl">

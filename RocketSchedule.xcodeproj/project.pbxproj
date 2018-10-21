@@ -17,6 +17,13 @@
 		14EDE1F8217B7DDC0056EFF4 /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1F4217B7DDC0056EFF4 /* LaunchTableViewCell.swift */; };
 		14EDE1F9217B7DDC0056EFF4 /* LaunchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE1F5217B7DDC0056EFF4 /* LaunchTableViewCell.xib */; };
 		14EDE1FB217B7DE60056EFF4 /* LaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1FA217B7DE60056EFF4 /* LaunchListViewController.swift */; };
+		14EDE1FD217B910E0056EFF4 /* LaunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1FC217B910E0056EFF4 /* LaunchDetailViewController.swift */; };
+		14EDE200217B927C0056EFF4 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE1FE217B927C0056EFF4 /* ImageTableViewCell.swift */; };
+		14EDE201217B927C0056EFF4 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE1FF217B927C0056EFF4 /* ImageTableViewCell.xib */; };
+		14EDE20B217BA28A0056EFF4 /* LaunchDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE209217BA28A0056EFF4 /* LaunchDetailTableViewCell.swift */; };
+		14EDE20C217BA28A0056EFF4 /* LaunchDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE20A217BA28A0056EFF4 /* LaunchDetailTableViewCell.xib */; };
+		14EDE20F217BB25B0056EFF4 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EDE20D217BB25B0056EFF4 /* ButtonTableViewCell.swift */; };
+		14EDE210217BB25B0056EFF4 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EDE20E217BB25B0056EFF4 /* ButtonTableViewCell.xib */; };
 		664C898260670B758240EA8D /* Pods_RocketScheduleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E119CE4795E921F8160808FF /* Pods_RocketScheduleUITests.framework */; };
 		89FE78B7217B641B00C04B3F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE78B6217B641B00C04B3F /* Network.swift */; };
 		980FDBB9AE7CD5B353E7CE46 /* Pods_RocketSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A3D8845BA1885324BAD84 /* Pods_RocketSchedule.framework */; };
@@ -58,6 +65,13 @@
 		14EDE1F4217B7DDC0056EFF4 /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
 		14EDE1F5217B7DDC0056EFF4 /* LaunchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchTableViewCell.xib; sourceTree = "<group>"; };
 		14EDE1FA217B7DE60056EFF4 /* LaunchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchListViewController.swift; sourceTree = "<group>"; };
+		14EDE1FC217B910E0056EFF4 /* LaunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchDetailViewController.swift; path = RocketSchedule/LaunchDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		14EDE1FE217B927C0056EFF4 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		14EDE1FF217B927C0056EFF4 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		14EDE209217BA28A0056EFF4 /* LaunchDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDetailTableViewCell.swift; sourceTree = "<group>"; };
+		14EDE20A217BA28A0056EFF4 /* LaunchDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchDetailTableViewCell.xib; sourceTree = "<group>"; };
+		14EDE20D217BB25B0056EFF4 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		14EDE20E217BB25B0056EFF4 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
 		3AA0C701379163BBEB1514E8 /* Pods-RocketSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketSchedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketSchedule/Pods-RocketSchedule.debug.xcconfig"; sourceTree = "<group>"; };
 		4EEECE8753B00F2D80FDDAC3 /* Pods_RocketScheduleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketScheduleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B68A4BBD6952C3243B79FC7 /* Pods-RocketScheduleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketScheduleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketScheduleTests/Pods-RocketScheduleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +139,7 @@
 				14EDE1B8217B559E0056EFF4 /* AppDelegate.swift */,
 				14EDE1BA217B559E0056EFF4 /* ViewController.swift */,
 				14EDE1FA217B7DE60056EFF4 /* LaunchListViewController.swift */,
+				14EDE1FC217B910E0056EFF4 /* LaunchDetailViewController.swift */,
 				14EDE1BF217B559F0056EFF4 /* Assets.xcassets */,
 				14EDE1EE217B7DDC0056EFF4 /* View */,
 				14EDE1C4217B559F0056EFF4 /* Info.plist */,
@@ -156,7 +171,10 @@
 			children = (
 				14EDE1EF217B7DDC0056EFF4 /* LaunchScreen.storyboard */,
 				14EDE1F1217B7DDC0056EFF4 /* Main.storyboard */,
+				14EDE208217BA28A0056EFF4 /* LaunchDetailTableViewCell */,
 				14EDE1F3217B7DDC0056EFF4 /* LaunchTableViewCell */,
+				14EDE202217B92820056EFF4 /* ImageTableViewCell */,
+				14EDE211217BB25F0056EFF4 /* ButtonTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +186,34 @@
 				14EDE1F5217B7DDC0056EFF4 /* LaunchTableViewCell.xib */,
 			);
 			path = LaunchTableViewCell;
+			sourceTree = "<group>";
+		};
+		14EDE202217B92820056EFF4 /* ImageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				14EDE1FE217B927C0056EFF4 /* ImageTableViewCell.swift */,
+				14EDE1FF217B927C0056EFF4 /* ImageTableViewCell.xib */,
+			);
+			path = ImageTableViewCell;
+			sourceTree = "<group>";
+		};
+		14EDE208217BA28A0056EFF4 /* LaunchDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				14EDE209217BA28A0056EFF4 /* LaunchDetailTableViewCell.swift */,
+				14EDE20A217BA28A0056EFF4 /* LaunchDetailTableViewCell.xib */,
+			);
+			name = LaunchDetailTableViewCell;
+			path = RocketSchedule/View/LaunchDetailTableViewCell;
+			sourceTree = SOURCE_ROOT;
+		};
+		14EDE211217BB25F0056EFF4 /* ButtonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				14EDE20D217BB25B0056EFF4 /* ButtonTableViewCell.swift */,
+				14EDE20E217BB25B0056EFF4 /* ButtonTableViewCell.xib */,
+			);
+			path = ButtonTableViewCell;
 			sourceTree = "<group>";
 		};
 		545E1573F449382E6FF5EC17 /* Frameworks */ = {
@@ -301,8 +347,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14EDE201217B927C0056EFF4 /* ImageTableViewCell.xib in Resources */,
 				14EDE1F9217B7DDC0056EFF4 /* LaunchTableViewCell.xib in Resources */,
 				14EDE1F7217B7DDC0056EFF4 /* Main.storyboard in Resources */,
+				14EDE210217BB25B0056EFF4 /* ButtonTableViewCell.xib in Resources */,
+				14EDE20C217BA28A0056EFF4 /* LaunchDetailTableViewCell.xib in Resources */,
 				14EDE1F6217B7DDC0056EFF4 /* LaunchScreen.storyboard in Resources */,
 				14EDE1C0217B559F0056EFF4 /* Assets.xcassets in Resources */,
 			);
@@ -422,10 +471,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14EDE20F217BB25B0056EFF4 /* ButtonTableViewCell.swift in Sources */,
+				14EDE200217B927C0056EFF4 /* ImageTableViewCell.swift in Sources */,
 				14EDE1BB217B559E0056EFF4 /* ViewController.swift in Sources */,
 				14EDE1B9217B559E0056EFF4 /* AppDelegate.swift in Sources */,
+				14EDE20B217BA28A0056EFF4 /* LaunchDetailTableViewCell.swift in Sources */,
 				14EDE1F8217B7DDC0056EFF4 /* LaunchTableViewCell.swift in Sources */,
 				14EDE1FB217B7DE60056EFF4 /* LaunchListViewController.swift in Sources */,
+				14EDE1FD217B910E0056EFF4 /* LaunchDetailViewController.swift in Sources */,
 				89FE78B7217B641B00C04B3F /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
